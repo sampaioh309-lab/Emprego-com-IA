@@ -4,6 +4,15 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Emprego com IA — Kit Prático</title>
 <meta name="description" content="Kit prático para melhorar sua preparação para processos seletivos usando inteligência artificial.">
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDX4DWT2V4"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-BDX4DWT2V4');
+</script>
+
 <style>
 *{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#071421;color:#f7fbff;line-height:1.55}
 .wrap{max-width:1080px;margin:auto;padding:0 20px}.hero{padding:52px 0 32px;background:linear-gradient(145deg,#071421,#0d2d4a)}
@@ -23,7 +32,7 @@ h2{font-size:32px;margin:0 0 22px}.list{display:grid;grid-template-columns:1fr 1
 <div><div class="accent"><b>EMPREGO COM IA</b></div><h1>Prepare-se melhor para processos seletivos usando <span class="accent">Inteligência Artificial</span></h1>
 <p class="lead">Um kit direto ao ponto para revisar seu currículo, organizar candidaturas, preparar mensagens para RH e treinar entrevistas — usando IA como apoio, sem inventar experiências.</p>
 <div class="price">R$ 19,90</div><div class="note">Pagamento único • material digital</div>
-<a class="btn" href="https://pay.kiwify.com.br/Fbs5GTR" target="_blank" rel="noopener">QUERO O EMPREGO COM IA</a>
+<a class="btn comprar" data-posicao="hero" href="https://pay.kiwify.com.br/Fbs5GTR" target="_blank" rel="noopener">QUERO O EMPREGO COM IA</a>
 </div><div class="visual"><img src="produto.png" alt="Kit digital Emprego com IA"></div>
 </div></header>
 
@@ -52,8 +61,18 @@ h2{font-size:32px;margin:0 0 22px}.list{display:grid;grid-template-columns:1fr 1
 
 <section class="cta" id="comprar"><div class="wrap"><h2>Comece a organizar sua busca por emprego com IA</h2>
 <p class="lead" style="margin:auto">Oferta de validação do produto: pagamento único de R$ 19,90.</p>
-<a class="btn" href="https://pay.kiwify.com.br/Fbs5GTR" target="_blank" rel="noopener">QUERO ACESSAR POR R$ 19,90</a>
+<a class="btn comprar" data-posicao="final" href="https://pay.kiwify.com.br/Fbs5GTR" target="_blank" rel="noopener">QUERO ACESSAR POR R$ 19,90</a>
 <p class="note">Pagamento processado com segurança pela Kiwify.</p>
 </div></section>
 <footer>Emprego com IA • Material educativo • Não há garantia de contratação ou resultados específicos.</footer>
+<script>
+document.querySelectorAll('.comprar').forEach(function(botao){
+ botao.addEventListener('click',function(){
+  if(typeof gtag==='function'){
+   gtag('event','clique_checkout',{posicao_botao:this.dataset.posicao||'desconhecida',destino:'kiwify'});
+  }
+ });
+});
+</script>
+
 </body></html>
